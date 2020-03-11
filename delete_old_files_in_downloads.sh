@@ -11,7 +11,7 @@ then
   exit 1
 fi
 
-if ! find /home/josephjang/Downloads/ -type f -ctime +5 -delete
+if ! find "${download_dir}" -type f -ctime +5 -delete
 then 
   echo "Deleting the old files from the download directory failed." >&2
   exit 1
